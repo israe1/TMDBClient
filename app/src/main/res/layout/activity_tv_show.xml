@@ -13,9 +13,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:navigationIcon="@drawable/round_arrow_back_24"
-            android:title="Movies"/>
+            android:title="TV Shows"/>
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/movieList"
+            android:id="@+id/tvShowList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:listitem="@layout/item_movie"/>
