@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+    <LinearLayout
+        android:id="@+id/main"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        tools:context=".presentation.HomeActivity">
+
+        <TextView
+            android:id="@+id/homeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:text="TMDB App"
+            style="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:background="@drawable/search_rounded_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/homeTitle"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:autofillHints="name"
+            android:textColorHint="#80868B"
+            android:hint="Search"
+            android:enabled="false"
+            android:drawableStart="@drawable/baseline_search_24"
+            app:drawableTint="#5F6368"
+            android:drawablePadding="12dp"/>
+
+        <include
+            android:id="@+id/itemMovies"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchEditText"
+            layout="@layout/item_category"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="32dp"
+            bind:categoryName="@{`Popular Movies`}"
+            bind:categoryDesc="@{`Tresnding films and new releases`}"
+            bind:categoryIcon="@{@drawable/category_icon_movie}" />
+
+        <include
+            android:id="@+id/itemTvShow"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchEditText"
+            layout="@layout/item_category"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            bind:categoryName="@{`TV Shows`}"
+            bind:categoryDesc="@{`Binge worthy series`}"
+            bind:categoryIcon="@{@drawable/category_icon_tv_show}" />
+
+        <include
+            android:id="@+id/itemPeople"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchEditText"
+            layout="@layout/item_category"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            bind:categoryName="@{`Artists`}"
+            bind:categoryDesc="@{`Chart-topping holywood actors`}"
+            bind:categoryIcon="@{@drawable/category_icon_people}" />
+    </LinearLayout>
+</layout>
