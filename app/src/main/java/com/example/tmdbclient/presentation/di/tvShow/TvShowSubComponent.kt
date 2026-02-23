@@ -1,10 +1,12 @@
 package com.example.tmdbclient.presentation.di.movie
 
+import com.example.tmdbclient.presentation.di.tvShow.TvShowModule
+import com.example.tmdbclient.presentation.di.tvShow.TvShowScope
 import com.example.tmdbclient.presentation.tvShow.TvShowActivity
 import dagger.Subcomponent
 
-@MovieScope
-@Subcomponent(modules = [MovieModule::class])
+@TvShowScope
+@Subcomponent(modules = [TvShowModule::class])
 interface TvShowSubComponent {
 
     fun inject(tvShowActivity: TvShowActivity)

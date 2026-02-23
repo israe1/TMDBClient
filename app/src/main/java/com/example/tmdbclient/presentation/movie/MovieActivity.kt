@@ -38,7 +38,7 @@ class MovieActivity : AppCompatActivity() {
         }
 
         (application as Injector).createMovieSubComponent().inject(this)
-        movieViewModel = ViewModelProvider(this, factory).get(MovieViewModel::class.java)
+        movieViewModel = ViewModelProvider(this, factory)[MovieViewModel::class.java]
 
         binding.toolbar.setNavigationOnClickListener { finish() }
         initRecyclerView()
