@@ -47,7 +47,7 @@
                     android:layout_height="wrap_content"
                     android:numStars="5"
                     tools:rating="4.5"
-                    android:rating="@{(float) (people.popularity / 2.0)}"
+                    android:rating="@{(float) (people.popularity / 10.0)}"
                     android:progressTint="#FFD700"
                     style="@style/Widget.AppCompat.RatingBar.Small"
                     android:layout_marginHorizontal="12dp"/>
